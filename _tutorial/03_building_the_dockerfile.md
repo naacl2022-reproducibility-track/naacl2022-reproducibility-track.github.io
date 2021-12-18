@@ -49,13 +49,13 @@ The Docker image can be built with the following command:
 docker build -t tutorial .
 ```
 It should be run in the same directory as the Dockerfile.
-This command names the image `tutorial`.
+The command will build the Dockerfile in the current directory (indicated by the final `.` argument) and the image will be tagged (or named) `tutorial` (indicated by the `-t` flag).
 
 If the build is successful, you can run a container based on that image by running:
 ```
-docker run -it --runtime nvidia tutorial /bin/bash
+docker run -it --gpus device=0 tutorial /bin/bash
 
-# Running without the "--runtime nvidia" flag will work, but
+# Running without the "--gpus device=0" flag will work, but
 # the container will not be able to access any of the GPU devices
 docker run -it tutorial /bin/bash
 ```
