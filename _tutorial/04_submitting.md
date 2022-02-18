@@ -57,9 +57,25 @@ If you make another submission you'll have to use a different name.
 There are two optional parameters, `--cmd` and `--entrypoint`, which each accept 1 argument and are used to override the `CMD` and `ENTRYPOINT` of your image.
 
 If the submission was successful it will print out a link on Beaker.org that you can follow to track the progress of your submission and view the logs.
+You can view the logs to check if the container printed the output that you expected it to.
 If the run fails for some reason you can use the logs to debug it and then resubmit when you're ready.
 
-TODO: How to notify the Reproducibility Track which run is the final one and how to verify it was "correct".
+## Verifying your Submission
+
+Once the submission logs contain your expected output, you can programmatically verify this with the `naacl-utils` command line tool.
+This is how the Reproducibility Track will confirm your Docker container outputs the expected text.
+
+First, save the expected output contents to a text file, here we call it `expected.txt`.
+Then, use `naacl-utils` to ensure the contents of `expected.txt` is contained as a substring in the Docker container's output:
+```bash
+# naacl-utils verify <submission-name> <expected-output-file>
+naacl-utils verify submission-1 expected.txt 
+```
+If this step succeeds and it is the final output you want to reproduce with your container, then you can proceed to submit your Docker container's information to the Reproducibility Track in the next step.
+
+## Submission Form
+
+TODO
 
 ## Installing Python
 
