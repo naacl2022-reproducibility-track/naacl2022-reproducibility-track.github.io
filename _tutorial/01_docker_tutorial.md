@@ -4,6 +4,8 @@ title: Docker Tutorial
 permalink: /tutorial/docker-tutorial
 ---
 
+[(Tutorial Home)](/tutorial/)
+
 This section of the tutorial describes what Docker is and includes a brief tutorial on how to use it, covering what you need to know to participate in the Reproducibility Track's automatic verification process.
 After reading this page, you should know:
 
@@ -30,7 +32,8 @@ Then, we should be able to run your container on our own machines and perfectly 
 
 A **Docker image** can be viewed as containing the binaries of a pre-configured virtual machine.
 Images are specified by a series of commands in a **Dockerfile** and built with the `docker build` command.
-Here is an example Dockerfile which should be written to a file called `Dockerfile`:
+
+Here is an example of the contents of a Dockerfile, which should be saved in a file called `Dockerfile` (no file extension):
 ```Dockerfile
 FROM python:3.7
 WORKDIR /app
@@ -42,22 +45,26 @@ The result of each command is cached so that the entire image does not have to b
 
 The `FROM` command specifies what the **base image** should be.
 Base images are images which other developers have created and posted publicly on [Docker Hub](https://hub.docker.com/).
-It is often easier to build on top of other images so that we do not have to install Python, for example.
+It is often easier to build on top of other images so that we do not have to install Python in the Docker image, for example.
 In the above example, we specify the base image is [`python:3.7`](https://hub.docker.com/layers/python/library/python/3.7/images/sha256-09dba728a3057ad5e5af4d5283c2af7297a46e4fe464e379dddb365becd1943c?context=explore), which is built on Ubuntu 20.04.
 
 The `WORKDIR` command indicates that all subsequent commands should be run from the `/app` directory.
 
-The `RUN` command specifies a commandline command to run.
+The `RUN` command specifies a command line command to run.
 In our example, we install version 1.21.4 of the NumPy library.
 This command could be used to install libraries with `apt-get`, download files using `wget`, run bash files with `sh`, etc.
 
 The `COPY` command copies a local file called `example-local.txt` into a file in the Docker image called `example-container.txt`.
+This can be useful to copy over source code or data files from your development machine into the Docker image.
+The file name does not need to change; we only changed it to point out which one is the local file and which one is in the container.
 
-Assuming there is a file in the same directory as the Dockerfile called `example-local.txt`, then the Dockerfile can be be built into an image via this command:
+The above Dockerfile can be built into an image via the following bash command:
 ```bash
 docker build -t example-image .
 ```
 which should be run from the same directory as the Dockerfile.
+Because the Dockerfile copies a local file called `example-local.txt` into the image, a file with that name needs to exist in the same directory as the Dockerfile.
+
 The `-t example-image` parameter means the tag (or the name) of the image should be `example-image` and the final `.` parameter means the Dockerfile is in the current directory.
 
 The images which have been built and saved on your machine can be viewed using the `docker image` command:
@@ -98,7 +105,7 @@ If you create a file or install a new library, upon exiting the container your c
 Any permanent modifications you want to make to the container must be done in the Dockerfile, the image must be rebuilt, and the container rerun.
 Running the containers is often very useful for debugging your Dockerfile.
 
-If you do not specify what command should be run on startup with `docker run`, then the default command will run.
+If you do not specify what command should be run on startup with `docker run`, then a default command will run (which is specified in the base image you used).
 The default command can be specified via the `CMD` command in the Dockerfile.
 For example, if we added
 ```Dockerfile
@@ -119,5 +126,5 @@ where `device=0` means GPU ID 0 is available to the container.
 
 Now that you know the basics of how Docker works, we next describe how to setup the development environment so you can build your own Docker images.
 
-[(Next: Setting Up the Development Environment)](/tutorial/development-environment)
+[(Next Page: Setting Up the Development Environment)](/tutorial/development-environment)
 

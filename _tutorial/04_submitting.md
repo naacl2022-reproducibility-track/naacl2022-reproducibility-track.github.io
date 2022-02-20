@@ -3,8 +3,9 @@ layout: page
 title: Submitting the Docker Image
 permalink: /tutorial/submitting
 ---
+[(Tutorial Home)](/tutorial/)
 
-[(Previous: Building the Dockerfile)](/tutorial/building-the-dockerfile)
+[(Previous Page: Building the Dockerfile)](/tutorial/building-the-dockerfile)
 
 This section will explain how to take your Docker container and submit it to the automatic verification tool.
 

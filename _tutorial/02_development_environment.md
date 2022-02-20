@@ -4,7 +4,9 @@ title: Setting Up the Development Environment
 permalink: /tutorial/development-environment
 ---
 
-[(Previous: Docker Tutorial)](/tutorial/docker-tutorial)
+[(Tutorial Home)](/tutorial/)
+
+[(Previous Page: Docker Tutorial)](/tutorial/docker-tutorial)
 
 The goal of this section is to set up your development environment so you are able to build Docker images.
 We have instructions for doing this on Google Cloud Platform (GCP) and your own machine.
@@ -33,13 +35,15 @@ After it has been created, you will be able to ssh into the machine in order to 
 2. Enter the name you want to use for your VM under "Deployment name."
 
 3. Select the region of the world you want the VM to be hosted under "Zone."
-There are some regional restrictions based on the type of GPU you want to use with the machine.
-For the purposes of building the Docker images, the zone is not very critical.
+Typically you want to select a region which is physically closest to where you are.
+However, there are some regional restrictions based on the type of GPU you want to use with the machine which might make this difficult.
+For the purposes of building the Docker images, the zone is not very critical, so do not worry if you cannot select a nearby zone as long as the type of GPU you want to use is available.
 
 4. Under "Machine Type," ensure "GPU" is selected.
 
 5. When you submit your Docker image to the Reproducibility Track, we will run it using a single NVIDIA Tesla A100 GPU.
 Therefore, for "GPU type," we recommend "NVIDIA Tesla A100" and setting the number of GPUs to 1.
+If the form raises an error that A100 GPUs are not available in your selected region, change the region to one which does have A100 GPUs even if it is not physically close to you.
 
 6. For machine type, select "a2-highgpu-1g," which is the same machine type which we will use to run your image.
 Leave "CPU platform" as "Automatic."
@@ -77,7 +81,7 @@ If you choose to run Docker on your own machine, there are two options for insta
 If you do have root access on your machine, the easiest way to install Docker is by following the [official instructions](https://docs.docker.com/get-docker/).
 
 If you do not have root access, you can install the rootless version following the instructions [here](https://docs.docker.com/engine/security/rootless/).
-However, doing so will require someone who does have root access to help with the setup, for example, from someone from your university or company's IT department.
+However, doing so will require someone who does have root access to help with the setup, for example, from someone in your university or company's IT department.
 Once the configurations which require root access are done, you can run Docker commands without requiring root access.
 
 Once you have Docker installed, you can proceed to [Section 2](#2-verifying-your-setup-works).
@@ -150,4 +154,4 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 If the above commands ran successfully, your development environment is correctly set up and you are ready to move on to converting your code base into a Dockerfile.
 
-[(Next: Building the Dockerfile)](/tutorial/building-the-dockerfile)
+[(Next Page: Building the Dockerfile)](/tutorial/building-the-dockerfile)

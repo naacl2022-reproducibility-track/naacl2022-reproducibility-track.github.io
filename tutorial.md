@@ -12,9 +12,10 @@ The tutorial contains the following sections:
 
 1. [Docker Tutorial](/tutorial/docker-tutorial)  
 This section explains the basics about Docker and what you need to know about it to participate in the Reproducibility Track.
+If you are already familiar with Docker, you can skip this part.
 
 2. [Setting up the Development Environment](/tutorial/development-environment)  
-Here we explain how to setup your develop environment so that you can build Docker containers, either on the Google Cloud Platform or on your local machine.
+Here we explain how to set up your development environment so that you can build Docker containers, either on the Google Cloud Platform or on your local machine.
 
 3. [Building the Dockerfile](/tutorial/building-the-dockerfile)  
 This section covers how to convert your code base into a Docker image.
