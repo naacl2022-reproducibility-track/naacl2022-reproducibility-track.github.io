@@ -46,7 +46,6 @@ Therefore, for "GPU type," we recommend "NVIDIA Tesla A100" and setting the numb
 If the form raises an error that A100 GPUs are not available in your selected region, change the region to one which does have A100 GPUs even if it is not physically close to you.
 
 6. For machine type, select "a2-highgpu-1g," which is the same machine type which we will use to run your image.
-Leave "CPU platform" as "Automatic."
 
 7. Under "Framework," select "Intel(R) optimized Base (with Intel(R) MKL and CUDA 11.0)"
 
@@ -56,6 +55,7 @@ Leave "CPU platform" as "Automatic."
 When we run your image, there will be a 1 TB disk.
 
 At this point the machine setup is configured, and the right side of the page should show you the estimated monthly cost of your configuration.
+Remember to stop your instance when it's not in use to avoid unnecessary charges.
 
 Hit "Deploy" at the bottom to create your image.
 

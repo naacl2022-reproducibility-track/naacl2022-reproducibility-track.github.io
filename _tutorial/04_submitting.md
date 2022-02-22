@@ -7,7 +7,8 @@ permalink: /tutorial/submitting
 
 [(Previous Page: Building the Dockerfile)](/tutorial/building-the-dockerfile)
 
-This section will explain how to take your Docker container and submit it to the automatic verification tool.
+This section will explain how to take your Docker image and submit it to the automatic verification tool.
+These commands verify the output from the Docker image built on the previous section of this tutorial, so you may follow along with these commands if you already built the `tutorial` Docker image.
 
 ## Create a Beaker Account
 
@@ -55,11 +56,14 @@ naacl-utils submit tutorial submission-1
 The first argument to `naacl-utils submit` is the name of your Docker image (e.g. "tutorial"), and the second is an arbitrary unique name you assign to your submission ("submission-1").
 If you make another submission you'll have to use a different name.
 
-There are two optional parameters, `--cmd` and `--entrypoint`, which each accept 1 argument and are used to override the `CMD` and `ENTRYPOINT` of your image.
+This command pushes the Docker image named "tutorial" to an image registry which contains the submissions for the Reproducibility Track.
+Then it will launch a Beaker job that will run an instance of that Docker image as a container. 
 
 If the submission was successful it will print out a link on Beaker.org that you can follow to track the progress of your submission and view the logs.
 You can view the logs to check if the container printed the output that you expected it to.
 If the run fails for some reason you can use the logs to debug it and then resubmit when you're ready.
+
+There are two optional parameters to the `naacl-utils submit` command, `--cmd` and `--entrypoint`, which each accept 1 argument and are used to override the `CMD` and `ENTRYPOINT` of your image.
 
 ## Verifying your Submission
 
@@ -67,12 +71,14 @@ Once the submission logs contain your expected output, you can programmatically 
 This is how the Reproducibility Track will confirm your Docker container outputs the expected text.
 
 First, save the expected output contents to a text file, here we call it `expected.txt`.
+If you followed along with the tutorial for Dockerizing a code base, `expected.txt` is included in [the example repository](https://github.com/naacl2022-reproducibility-track/reproducibility-example).
 Then, use `naacl-utils` to ensure the contents of `expected.txt` is contained as a substring in the Docker container's output:
 ```bash
 # naacl-utils verify <submission-name> <expected-output-file>
-naacl-utils verify submission-1 expected.txt 
+naacl-utils verify submission-1 expected.txt
 ```
 If this step succeeds and it is the final output you want to reproduce with your container, then you can proceed to submit your Docker container's information to the Reproducibility Track in the next step.
+Otherwise, please investigate the Beaker job's logs to identify what went wrong.
 
 ## Submission Form
 

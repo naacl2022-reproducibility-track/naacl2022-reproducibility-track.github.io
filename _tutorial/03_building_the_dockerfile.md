@@ -36,6 +36,7 @@ We begin by building the base image for the Docker image, then how to do each of
 ### 2.1 Building the Base Image
 First, create a new file in the root of the codebase called `Dockerfile` with the following contents (if you cloned the example repository and the file already exists, delete it and create a new one):
 ```Dockerfile
+# In "Dockerfile"
 FROM danieldeutsch/python:3.7-cuda11.0.3-base
 WORKDIR /app
 ```
@@ -81,6 +82,7 @@ This can be done in a variety of different ways depending on where the model is 
 The pre-trained model in this example is available for download at a specific URL, so we add a command to download it using `wget`.
 Add this line to the `Dockerfile`:
 ```Dockerfile
+# Add to "Dockerfile"
 RUN wget https://dl.fbaipublicfiles.com/fairseq/models/bart.large.cnn.tar.gz && \
     tar -xvf bart.large.cnn.tar.gz --no-same-owner && \
     rm bart.large.cnn.tar.gz
@@ -89,7 +91,10 @@ This command downloads the tarfile that contains the model from a URL, untars th
 Deleting the tarfile is not required, but it decreases the size of the resulting Docker image.
 Docker caches the result of each command in the Dockerfile, so we perform all of these steps in one `RUN` command to decrease the cache usage.
 
-If your pre-trained model is downloadable via `wget`, you can follow the same procedure.
+After re-building the Docker image and running a container, you can run `ls` in the shell to confirm the pre-trained model is included in the image.
+Re-building the image will take several minutes.
+
+If the pre-trained model for the model which you are trying to Dockerize is downloadable via `wget`, you can follow the same procedure.
 If the file exists locally on the same machine where you are building the image, you can use the copy command (you do not need to add this line for the tutorial):
 ```Dockerfile
 # COPY <name-of-src-file-locally> <name-of-tgt-file-in-image>
@@ -100,8 +105,6 @@ If your model is stored on Google Drive, you can use `gdown` (again, not require
 RUN pip install --no-cache-dir gdown && \
     gdown https://drive.google.com/uc?id=<file-id> --output <file-name>
 ```
-
-After re-building the Docker image and running a container, you can run `ls` in the shell to confirm the pre-trained model is included in the image.
 
 ### 2.3 Installing Dependencies
 
@@ -119,8 +122,17 @@ The command (1) clones the repository, (2) `cd`s into the cloned directory, (3) 
 Checking out a specific commit is not explicitly necessary, but it does ensure that if someone tries to build your Docker image 6 months from now, their built image will use the same version of `fairseq` as your image.
 The `--no-cache-dir` argument is also not required, but it will reduce the disk size of the final image.
 
+Fairseq is built on PyTorch, so installing Fairseq also installs PyTorch.
+However, the default version of CUDA that is packaged with PyTorch is 10.2, which is incompatible with the A100 GPU that the verification tool will use to run your Docker container.
+Therefore, after installing Fairseq, we manually re-install PyTorch with CUDA 11:
+```Dockerfile
+# Add to "Dockerfile"
+RUN pip install torch==1.10.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+``` 
+
 Then we install some additional required libraries:
 ```Dockerfile
+# Add to "Dockerfile"
 RUN pip install requests==2.26.0 rouge-score==0.0.4 --no-cache-dir
 ```
 We recommend fixing the versions of the dependencies required by your code, again, so that the same Docker image can be built by another person in the future.
@@ -138,7 +150,8 @@ which shows that `fairseq` has been installed.
 Next, we copy over the source code required to run the pre-trained model and the data that it will be run on.
 `data` and `src` are directories in the same directory as the Dockerfile which we are writing.
 ```Dockerfile
-# COPY <name-of-src-dir-locally> <name-of-tgt-dir-in-image>
+# Add to "Dockerfile"
+# Syntax: COPY <name-of-src-dir-locally> <name-of-tgt-dir-in-image>
 COPY data data
 COPY src src
 ```
@@ -172,13 +185,16 @@ docker run --gpus 0 -it tutorial
 
 If you run `reproduce.sh`, you should see the final line of stdout should be:
 ```
-# If you run on a CPU
-{"rouge1": "40.19", "rouge2": "16.41"}
-# If you run on a GPU ("--runtime nvidia")
-{"rouge1": "41.65", "rouge2": "18.33"}
+# If you run on a CPU, you should get the following output:
+# {"rouge1": "40.19", "rouge2": "16.41"}
+docker run -it tutorial
+
+# If you run on a GPU, you should get the following output:
+# {"rouge1": "40.95", "rouge2": "18.56"}
+docker run --gpus 0 -it tutorial
 ```
 
-The automatic verification tool will run your image without specifying the command, so you should include a specific `CMD` to run.
+The automatic verification tool will run your image without specifying the command by default, so you should include a specific `CMD` to run.
 
 Once the default command outputs the result you intend to verify as reproducible, you are ready to submit the Docker image to the automatic verifier.
 
