@@ -37,7 +37,6 @@ Each one has CUDA 11, the minimum version required for your Docker image.
 
 These images do not have any deep learning libraries pre-installed, so you must do it yourself.
 PyTorch can be installed with one of the following commands:
-- `RUN pip install --no-cache-dir torch==1.7.0+cu110 -f https://download.pytorch.org/whl/torch_stable.html`
 - `RUN pip install --no-cache-dir torch==1.7.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html`
 - `RUN pip install --no-cache-dir torch==1.8.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html`
 - `RUN pip install --no-cache-dir torch==1.8.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html`
