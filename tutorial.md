@@ -3,7 +3,7 @@ layout: page
 title: Dockerization Tutorial
 permalink: /tutorial/
 header: true
-order: 2
+order: 1
 ---
 
 The goal of this tutorial is to walk you through how to take the code from your paper, convert it to a reproducible Docker image, and submit the image to the Reproducibility Track's automatic verification tool.
