@@ -11,9 +11,7 @@ In this section, we provide step-by-step instructions for taking an existing cod
 
 ## 1 The Code
 The code which we Dockerize in this tutorial can be found [here](https://github.com/naacl2022-reproducibility-track/reproducibility-example).
-If you follow along with the commands in this tutorial, you should clone that repository and delete the existing Dockerfile.
-
-The code is meant to simulate an example codebase that corresponds to a published paper which proposes a new summarization model.
+The codebase is meant to simulate an example codebase that corresponds to a published paper which proposes a new summarization model.
 The Dockerfile built here will reproduce the [ROUGE](https://aclanthology.org/W04-1013/) score (an automatic method of evaluating summary quality) reported by the hypothetical paper by running a pre-trained summarization model released by the authors on a test dataset to generate summaries and calculating ROUGE using the generated summaries.
 
 In reality, the pre-trained model model is a [BART](https://aclanthology.org/2020.acl-main.703/) model fine-tuned on the CNN/DailyMail dataset which was released by the BART authors, and we only run inference on 10 test examples for the sake of this tutorial.
@@ -32,9 +30,18 @@ From a high-level, this means:
   - Adding and running a script that reproduces the results from your paper
 
 We begin by building the base image for the Docker image, then how to do each of the above steps is described.
+The final Dockerfile that will be created if you follow the tutorial can be found [here](https://github.com/naacl2022-reproducibility-track/reproducibility-example/blob/master/Dockerfile).
+You may use this as a reference if you become confused.
 
 ### 2.1 Building the Base Image
-First, create a new file in the root of the codebase called `Dockerfile` with the following contents (if you cloned the example repository and the file already exists, delete it and create a new one):
+First, clone the GitHub repository with the code and data for the tutorial, then delete the existing Dockerfile (which we will re-create).
+```
+git clone https://github.com/naacl2022-reproducibility-track/reproducibility-example
+cd reproducibility-example
+rm Dockerfile
+```
+
+Then, create a new file in the root of the codebase called `Dockerfile` with the following contents:
 ```Dockerfile
 # In "Dockerfile"
 FROM danieldeutsch/python:3.7-cuda11.0.3-base
@@ -54,6 +61,9 @@ docker build -t tutorial .
 ```
 It should be run in the same directory as the Dockerfile.
 The command will build the Dockerfile in the current directory (indicated by the final `.` argument) and the image will be tagged (or named) `tutorial` (indicated by the `-t` flag).
+
+You may see warnings when you build the Dockerfile here or as more commands are added to the Dockerfile;
+they can very likely be ignored as long as the build command is successful.
 
 If the build is successful, you can run a container based on that image by running:
 ```
@@ -113,6 +123,7 @@ The example codebase requires [`fairseq`](https://github.com/pytorch/fairseq) pl
 
 To install `fairseq`, we clone the repository and install it from source:
 ```Dockerfile
+# Add to "Dockerfile"
 RUN git clone https://github.com/pytorch/fairseq && \
     cd fairseq && \
     git checkout d792b793a777bf660d2aaeb095c2381af189e626 && \
@@ -163,6 +174,7 @@ After building the image and starting a container, running `ls` should show that
 
 Finally, we copy over the bash script which will be run by the tool which verifies the image outputs the expected results, and we instruct the image to run that script by default:
 ```Dockerfile
+# Add to "Dockerfile"
 COPY reproduce.sh reproduce.sh
 CMD ["sh", "reproduce.sh"]
 ```

@@ -1,12 +1,15 @@
 ---
 layout: page
-title: Dockerization Tutorial
+title: Verification Tutorial
 permalink: /tutorial/
 header: true
 order: 1
 ---
 
-The goal of this tutorial is to walk you through how to take the code from your paper, convert it to a reproducible Docker image, and submit the image to the Reproducibility Track's automatic verification tool.
+The goal of this tutorial is to walk you through how to take the code from your paper, convert it to a reproducible Docker image (which amounts to creating a file that looks like [this](https://github.com/naacl2022-reproducibility-track/reproducibility-example/blob/master/Dockerfile)), and submit the image to the Reproducibility Track's automatic verification tool to earn the Reproducible Results Badge.
+
+**No Docker experience is required to follow this tutorial and earn the badge**;
+we expect it should take you about 2 hours to follow if you have never used Docker before.
 
 The tutorial contains the following sections:
 

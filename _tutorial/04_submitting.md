@@ -59,6 +59,7 @@ If you make another submission you'll have to use a different name.
 This command pushes the Docker image named "tutorial" to an image registry which contains the submissions for the Reproducibility Track.
 Then it will launch a Beaker job that will run an instance of that Docker image as a container. 
 
+This command may take a couple of minutes to run.
 If the submission was successful it will print out a link on Beaker.org that you can follow to track the progress of your submission and view the logs.
 You can view the logs to check if the container printed the output that you expected it to.
 If the run fails for some reason you can use the logs to debug it and then resubmit when you're ready.
@@ -67,7 +68,7 @@ There are two optional parameters to the `naacl-utils submit` command, `--cmd` a
 
 ## Verifying your Submission
 
-Once the submission logs contain your expected output, you can programmatically verify this with the `naacl-utils` command line tool.
+Once the submission logs contain your expected output (i.e., the output logs from the Beaker job found at the link output by the `submit` command contain the output you expected), you can programmatically verify this with the `naacl-utils` command line tool.
 This is how the Reproducibility Track will confirm your Docker container outputs the expected text.
 
 First, save the expected output contents to a text file, here we call it `expected.txt`.
@@ -79,6 +80,8 @@ naacl-utils verify submission-1 expected.txt
 ```
 If this step succeeds and it is the final output you want to reproduce with your container, then you can proceed to submit your Docker container's information to the Reproducibility Track in the next step.
 Otherwise, please investigate the Beaker job's logs to identify what went wrong.
+
+As a reminder, if you used a cloud service to develop your Dockerfile, terminate it after you are finished working so you are not charged for when the machine is not in use. 
 
 ## Submission Form
 

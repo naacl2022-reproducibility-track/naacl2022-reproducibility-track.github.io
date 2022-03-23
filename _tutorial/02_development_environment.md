@@ -31,15 +31,19 @@ We will launch an instance of a VM that is pre-configured to have Docker and the
 After it has been created, you will be able to ssh into the machine in order to build Docker images without any additional setup.
 
 1. Navigate to [this page](https://console.cloud.google.com/marketplace/details/click-to-deploy-images/deeplearning?_ga=2.164017215.1672077375.1645308010-1196613419.1636076578) and select "Launch" to configure a new GCP instance.
+Follow the steps below to configure the machine.
+A screenshot of the target configuration is available [here](/assets/images/gcp-configuration.png).
 
 2. Enter the name you want to use for your VM under "Deployment name."
 
 3. Select the region of the world you want the VM to be hosted under "Zone."
 Typically you want to select a region which is physically closest to where you are.
-However, there are some regional restrictions based on the type of GPU you want to use with the machine which might make this difficult.
-For the purposes of building the Docker images, the zone is not very critical, so do not worry if you cannot select a nearby zone as long as the type of GPU you want to use is available.
+However, we will configure the machine to have an A100 GPU, and those GPUs are not available in all regions, so we recommend picking region somewhat physically close to you that will allow you to select an A100 GPU (see [this link](https://cloud.google.com/compute/docs/gpus/gpu-regions-zones) for regions with A100 GPUs available).
+For the purposes of building the Docker images, the zone is not very critical, so do not worry if you have to pick a region which is not close to you.
 
-4. Under "Machine Type," ensure "GPU" is selected.
+4. Under "Machine Family," ensure "GPU" is selected.
+We have seen that if the width of your web browser is too narrow, the "GPU" option is hidden behind other UI elements on the page.
+If you don't see this option, try making the browser wider.
 
 5. When you submit your Docker image to the Reproducibility Track, we will run it using a single NVIDIA Tesla A100 GPU.
 Therefore, for "GPU type," we recommend "NVIDIA Tesla A100" and setting the number of GPUs to 1.
@@ -153,5 +157,7 @@ python -c "import torch; print(torch.cuda.is_available())"
 ```
 
 If the above commands ran successfully, your development environment is correctly set up and you are ready to move on to converting your code base into a Dockerfile.
+
+You can now run `exit` to terminate that Docker container.
 
 [(Next Page: Building the Dockerfile)](/tutorial/building-the-dockerfile)
