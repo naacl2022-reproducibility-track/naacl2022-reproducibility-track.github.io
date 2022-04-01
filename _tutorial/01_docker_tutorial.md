@@ -65,7 +65,7 @@ docker build -t example-image .
 which should be run from the same directory as the Dockerfile.
 Because the Dockerfile copies a local file called `example-local.txt` into the image, a file with that name needs to exist in the same directory as the Dockerfile.
 
-The `-t example-image` parameter means the tag (or the name) of the image should be `example-image` and the final `.` parameter means the Dockerfile is in the current directory.
+The `-t example-image` argument means the tag (or the name) of the image should be `example-image` and the final `.` argument means the Dockerfile is in the current directory.
 
 The images which have been built and saved on your machine can be viewed using the `docker image` command:
 ```bash

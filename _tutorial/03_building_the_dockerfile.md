@@ -15,6 +15,7 @@ The codebase is meant to simulate an example codebase that corresponds to a publ
 The Dockerfile built here will reproduce the [ROUGE](https://aclanthology.org/W04-1013/) score (an automatic method of evaluating summary quality) reported by the hypothetical paper by running a pre-trained summarization model released by the authors on a test dataset to generate summaries and calculating ROUGE using the generated summaries.
 
 In reality, the pre-trained model model is a [BART](https://aclanthology.org/2020.acl-main.703/) model fine-tuned on the CNN/DailyMail dataset which was released by the BART authors, and we only run inference on 10 test examples for the sake of this tutorial.
+**You should pick a meaningful result to reproduce for your own paper.**
 
 The codebase contains Python scripts to (1) load the pre-trained model and run inference on the test set and (2) calculate ROUGE score of the predicted summaries.
 It additionally contains a bash script called `reproduce.sh` which runs these scripts and outputs the final ROUGE scores to stdout.
@@ -147,7 +148,6 @@ Then we install some additional required libraries:
 RUN pip install requests==2.26.0 rouge-score==0.0.4 --no-cache-dir
 ```
 We recommend fixing the versions of the dependencies required by your code, again, so that the same Docker image can be built by another person in the future.
-See [this page](/tutorial/exporting-environments) for instructions for exporting your Python environment to identify which packages you have installed.
 
 By building the image and running a container, you should be able to confirm that the Python dependencies were installed.
 For example, within the Docker container, run
@@ -208,6 +208,7 @@ docker run --gpus 0 -it tutorial
 
 The automatic verification tool will run your image without specifying the command by default, so you should include a specific `CMD` to run.
 
-Once the default command outputs the result you intend to verify as reproducible, you are ready to submit the Docker image to the automatic verifier.
+For your own paper, you should have the container output a meaningful result to demonstrate that it is reproducible.
+Once the default command outputs that intended result, you are ready to submit the Docker image to the automatic verifier.
 
 [(Next Page: Submitting the Docker Image)](/tutorial/submitting)

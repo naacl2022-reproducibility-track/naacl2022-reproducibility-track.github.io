@@ -26,5 +26,5 @@ This section covers how to convert your code base into a Docker image.
 4. [Submitting the Docker Image](/tutorial/submitting)  
 Here, we describe the process of taking your Docker container and submitting it to the Reproducibility Track's automatic verification tool.
 
-## Issues
-If you encounter any issues with this tutorial or want to suggest modifications, please open an issue on the [GitHub repository for this website](https://github.com/naacl2022-reproducibility-track/naacl2022-reproducibility-track.github.io).
+## Issues & Questions
+If you encounter any issues with this tutorial or have any questions, please join our [Slack](https://join.slack.com/t/cs-b5i1449/shared_invite/zt-16nrrhflc-gPPQwvU7OQCEoO8YG393Ng) or email the Reproducibility Chairs at `naacl-2022-reproducibility-track@googlegroups.com`.

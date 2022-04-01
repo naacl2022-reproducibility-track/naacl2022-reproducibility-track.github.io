@@ -45,7 +45,8 @@ Then follow the prompts to complete the setup.
 
 ## Submitting a Docker image
 
-You can submit a new Docker image with the `naacl-utils submit` command.
+Once you have created a Docker image which outputs some expected result, you can submit it to the verification tool, which will run your Docker image.
+You can submit the image with the `naacl-utils submit` command.
 For example, if you followed the previous steps of this tutorial, you can submit the Docker image called `tutorial` like this:
 
 ```bash
@@ -79,13 +80,14 @@ Then, use `naacl-utils` to ensure the contents of `expected.txt` is contained as
 naacl-utils verify submission-1 expected.txt
 ```
 If this step succeeds and it is the final output you want to reproduce with your container, then you can proceed to submit your Docker container's information to the Reproducibility Track in the next step.
-Otherwise, please investigate the Beaker job's logs to identify what went wrong.
+If the step does not succeed or it does not yet reproduce the result you want it to, please investigate the Beaker job's logs to identify what went wrong or make another submission.
 
 As a reminder, if you used a cloud service to develop your Dockerfile, terminate it after you are finished working so you are not charged for when the machine is not in use. 
 
 ## Submission Form
 
-TODO
+If you are ready to submit to the Reproducibility Track, you may do so by filling out [this form](https://forms.office.com/r/BmTTJ5fKfH).
+The information necessary to earn the Reproducible Results Badge is your Beaker username (which you can find [here](https://beaker.org/user)) as well as your submission name (the argument you passed to the `submit` and `verify` commands).
 
 ## Installing Python
 
