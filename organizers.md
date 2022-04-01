@@ -2,7 +2,7 @@
 layout: page
 title: Organizers
 permalink: /organizers/
-order: 2
+order: 3
 header: true
 ---
 
