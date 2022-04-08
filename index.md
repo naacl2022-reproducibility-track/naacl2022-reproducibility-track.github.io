@@ -31,11 +31,14 @@ Conversion notes:
 
 ## Important Dates
 
-- Submission Window ([form](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u)) Begins Upon Acceptance Notification: April 7th, 2022
-- Sign up for the Reproducibility Badge ([form](https://forms.office.com/r/i88YsKM58i)). You may still participate if you do not sign up. The sign up form is to gather information about distributing GCP Credits: April 12, 2022
-- Office Hours to Help with Submissions: TBD
-- Submission Window ([form](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u)) Ends When Camera Ready is Due: May 3, 2022
-- Badge Notification Date 10 Days After Camera Ready Due: May 13, 2022
+| Deadline |  | 
+| ----------- | ----------- |
+| April 7     | Submission window begins. The form to submit to the track can be found [here](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u). |
+| April 12   | Sign up for the Reproducible Results Badge [here](https://forms.office.com/r/i88YsKM58i). This form is to gauge interest and collect information for distributing GCP credits. You may still apply for the Reproducible Results Badge if you do not sign up by this date. |
+| TBD | Office hours to help with submissions |
+| May 3 | Submissions due at the camera ready deadline. You may submit to the track [here](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u) |
+| May 13 | Badge notification date |
+
 
 **TLDR;** After notification of acceptance and before the camera ready is due authors will have the option to earn up to three reproducibility “badges” by 1) providing a link to code, 2) providing a link to a trained model, and 3) participating in a verification process where a trained model will replicate some result from the paper. 
 
