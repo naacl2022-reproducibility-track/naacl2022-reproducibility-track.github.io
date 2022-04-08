@@ -5,7 +5,7 @@
 layout: home
 --- 
 
-This is the homepage for the new [Reproducibility Track](https://2022.naacl.org/blog/reproducibility-track/) introduced at [NAACL 2022](https://2022.naacl.org/). If you are interested in participating, please join our [Slack workspace](https://join.slack.com/t/cs-b5i1449/shared_invite/zt-16nrrhflc-gPPQwvU7OQCEoO8YG393Ng). You can also reach us [via email](mailto:naacl-2022-reproducibility-track@googlegroups.com).
+This is the homepage for the new [Reproducibility Track](https://2022.naacl.org/blog/reproducibility-track/) introduced at [NAACL 2022](https://2022.naacl.org/). If you are interested in participating, please join our [Slack workspace](https://join.slack.com/t/cs-b5i1449/shared_invite/zt-16nrrhflc-gPPQwvU7OQCEoO8YG393Ng). You can also reach us [via email](mailto:naacl-2022-reproducibility-track@googlegroups.com). Please submit the relevant information required to participate in [this form](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u).
 
 <!-- Output copied to clipboard! -->
 
@@ -31,12 +31,12 @@ Conversion notes:
 
 ## Important Dates
 
-- Submission Window Begins Upon Acceptance Notification: April 7th, 2022
+- Submission Window ([form](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u)) Begins Upon Acceptance Notification: April 7th, 2022
 - Office Hours to Help with Submissions: TBD
-- Submission Window Ends When Camera Ready is Due: May 3, 2022
+- Submission Window ([form](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u)) Ends When Camera Ready is Due: May 3, 2022
 - Badge Notification Date 10 Days After Camera Ready Due: May 13, 2022
 
-**TLDR;** After notification of acceptance and before the camera ready is due authors will have the option to earn up to three reproducibility “badges” by 1) providing a link to code, 2) providing a link to a trained model, and 3) participating in a verification process where a trained model will replicate some result from the paper.
+**TLDR;** After notification of acceptance and before the camera ready is due authors will have the option to earn up to three reproducibility “badges” by 1) providing a link to code, 2) providing a link to a trained model, and 3) participating in a verification process where a trained model will replicate some result from the paper. 
 
 ## Track
 
