@@ -32,6 +32,7 @@ Conversion notes:
 ## Important Dates
 
 - Submission Window ([form](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u)) Begins Upon Acceptance Notification: April 7th, 2022
+- Sign up for the Reproducibility Badge ([form](https://forms.office.com/r/i88YsKM58i)). You may still participate if you do not sign up. The sign up form is to gather information about distributing GCP Credits: April 12, 2022
 - Office Hours to Help with Submissions: TBD
 - Submission Window ([form](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u)) Ends When Camera Ready is Due: May 3, 2022
 - Badge Notification Date 10 Days After Camera Ready Due: May 13, 2022
