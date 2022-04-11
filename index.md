@@ -48,7 +48,7 @@ This track introduces a badge system to formalize expectations around reproducib
 
 ### What are these reproducibility badges?
 
-The papers accepted to the NAACL conference can apply for three types of badges.
+The papers accepted to the NAACL main conference and Findings can apply for three types of badges.
 
 **1) Open-Source Code Badge**: Authors submit a link to code. The code itself will not be run by reviewers (though it may be visually checked), so it is up to the authors to provide appropriate documentation. We recommend authors check the PapersWithCode code completeness checklist [here](https://medium.com/paperswithcode/ml-code-completeness-checklist-e9127b168501).
 
@@ -83,3 +83,7 @@ The main benefit to authors is in making their work reproducible in a way that w
 **Q**: Do I need to anonymize the code, model, or executable?
 
 **A**: No. This process will take place after notification of acceptance, so it will not interact with double-blind reviewing of the paper. In addition, much of this process will be automatic, and badge reviewers will only check to confirm that, for example, the links authors provide work as intended, and that there aren’t errors in the automatic verification process.
+
+**Q**: Are papers accepted to Findings able to participate?
+
+**A**: Yes.
