@@ -1,10 +1,12 @@
 ---
-layout: page
+layout: default
 title: Organizers
 permalink: /organizers/
 order: 3
 header: true
 ---
+
+# Organizers
 
 <div class="row" markdown="1" align="center">
 <figure style="display:inline-block; padding: 10px">
@@ -34,3 +36,12 @@ header: true
         <figcaption style="word-wrap: break-word;font-size: 14px;text-align: center;">Pete Walsh</figcaption>
 </figure>
 </div>
+
+# Volunteers
+
+- Sophia Chan
+- Qingzhi Hu
+- Alyssa Hwang
+- Jishnu Jaykumar P
+- Qing Lyu
+- Maja Schneider
