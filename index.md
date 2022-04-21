@@ -35,7 +35,7 @@ Conversion notes:
 | ----------- | ----------- |
 | April 7     | Submission window begins. The form to submit to the track can be found [here](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u). |
 | April 12   | Sign up for the Reproducible Results Badge [here](https://forms.office.com/r/i88YsKM58i). This form is to gauge interest and collect information for distributing GCP credits. You may still apply for the Reproducible Results Badge if you do not sign up by this date. |
-| TBD | Office hours to help with submissions |
+| April 19 | Office hours to help with submissions announced. Please see [here](/pages/office-hours.html) for times |
 | May 3 | Submissions due at the camera ready deadline. You may submit to the track [here](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u) |
 | May 13 | Badge notification date |
 
@@ -54,7 +54,7 @@ The papers accepted to the NAACL main conference and Findings can apply for thre
 
 **2) Trained Model Badge**: Authors submit a link to download a trained model. Similar to the Open-Source Code Badge, the model will not be run by reviewers, though other aspects (e.g. size on disk) will be checked to confirm that the provided link works.
 
-**3) Reproducible Results Badge**: Authors verify that their model replicates a result they specify from their paper. Authors will package a trained model into a Docker container and submit the container to a server where it will be executed automatically. The server will execute the container and verify that its output matches a result from the author’s paper. In addition to detailed guidelines and materials, the track will also provide compute resources, a discussion forum, and office hours to facilitate this. A tutorial for how to participate in this process and apply for the Reproducible Results badge can be found [here](/tutorial).
+**3) Reproducible Results Badge**: Authors verify that their model replicates a result they specify from their paper. Authors will package a trained model into a Docker container and submit the container to a server where it will be executed automatically. The server will execute the container and verify that its output matches a result from the author’s paper. In addition to detailed guidelines and materials, the track will also provide compute resources, a discussion forum, and office hours to facilitate this. A tutorial for how to participate in this process and apply for the Reproducible Results badge can be found [here](/tutorial). Information about office hours for helping you apply for this badge can be found [here](/pages/office-hours.html).
 
 The primary goals of these three badges are to formalize how authors release code and trained models, and to make it easier for other researchers to find and use them. These badges build on the suggested [badges](https://www.acm.org/publications/policies/artifact-review-badging) from the ACM. The first two badges are types of “Artifact Available” badges which indicate that authors make some (unverified) materials available, and the third is a “Results Replicated” badge also meant to provide a working runtime environment so future researchers can easily build on or compare against the published work.
 

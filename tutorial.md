@@ -6,6 +6,9 @@ header: true
 order: 1
 ---
 
+**New:** We are hosting office hours to help you package your code and submit to our verification service.
+Please see [this page](/pages/office-hours.html) for office hours times.
+
 The goal of this tutorial is to walk you through how to take the code from your paper, convert it to a reproducible Docker image (which amounts to creating a file that looks like [this](https://github.com/naacl2022-reproducibility-track/reproducibility-example/blob/master/Dockerfile)), and submit the image to the Reproducibility Track's automatic verification tool to earn the Reproducible Results Badge.
 
 **No Docker experience is required to follow this tutorial and earn the badge**;
