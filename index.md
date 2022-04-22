@@ -34,7 +34,7 @@ Conversion notes:
 | Deadline |  | 
 | ----------- | ----------- |
 | April 7     | Submission window begins. The form to submit to the track can be found [here](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u). |
-| April 12   | Sign up for the Reproducible Results Badge [here](https://forms.office.com/r/i88YsKM58i). This form is to gauge interest and collect information for distributing GCP credits. You may still apply for the Reproducible Results Badge if you do not sign up by this date. |
+| April 12   | Sign up for the Reproducible Results Badge [here](https://forms.office.com/r/i88YsKM58i). This form is to gauge interest in participation. You may still apply for the Reproducible Results Badge if you do not sign up by this date. |
 | April 19 | Office hours to help with submissions announced. Please see [here](/pages/office-hours.html) for times |
 | May 3 | Submissions due at the camera ready deadline. You may submit to the track [here](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u) |
 | May 13 | Badge notification date |
