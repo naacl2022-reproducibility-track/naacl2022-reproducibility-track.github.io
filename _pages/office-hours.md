@@ -62,6 +62,12 @@ If these times do not work for you or you are unable to access Google Meet, plea
   </tr>
 </table>
 
+<style>
+.strikethrough{
+    text-decoration: line-through;
+}
+</style>
+
 <script>
 days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 months = ["April", "May"];
@@ -102,10 +108,19 @@ events = [
     "https://calendar.google.com/event?action=TEMPLATE&tmeid=MDV2NHZoc3M4dGlwOWJsczY1bHRpN2lydmcgZGRldXRzY2hAc2Vhcy51cGVubi5lZHU&tmsrc=ddeutsch%40seas.upenn.edu",
 ];
 
+var now = new Date();
+
 dates.forEach((date, index) => {
+    console.log(now > date);
+
     document.getElementById(index + "_utc").innerHTML = getUTCDateString(date);
     document.getElementById(index + "_local").innerHTML = getLocalDateString(date);
     document.getElementById(index + "_event").innerHTML = "<a href=\"" + events[index] + "\">Link</a>";
+    if (now > date) {
+        document.getElementById(index + "_utc").setAttribute("class", "strikethrough");
+        document.getElementById(index + "_local").setAttribute("class", "strikethrough");
+        document.getElementById(index + "_event").setAttribute("class", "strikethrough");
+    }
 });
 
 </script>
