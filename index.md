@@ -36,9 +36,10 @@ Conversion notes:
 | April 7     | Submission window begins. The form to submit to the track can be found [here](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u). |
 | April 12   | Sign up for the Reproducible Results Badge [here](https://forms.office.com/r/i88YsKM58i). This form is to gauge interest in participation. You may still apply for the Reproducible Results Badge if you do not sign up by this date. |
 | April 19 | Office hours to help with submissions announced. Please see [here](/pages/office-hours.html) for times |
-| May 3 | Submissions due at the camera ready deadline. You may submit to the track [here](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u) |
-| May 13 | Badge notification date |
-
+| May 3 | Submissions for **main conference papers** (including Findings) are due at the camera ready deadline. You may submit to the track [here](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u) |
+| May 13 | Badge notification date for main conference papers |
+| May 18 | Submission deadline for **demo papers**. You may submit to the track [here](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u) |
+| May 28 | Badge notification date for demo papers |
 
 **TLDR;** After notification of acceptance and before the camera ready is due authors will have the option to earn up to three reproducibility “badges” by 1) providing a link to code, 2) providing a link to a trained model, and 3) participating in a verification process where a trained model will replicate some result from the paper. 
 
