@@ -30,10 +30,10 @@ Each of these images comes with the respective TensorFlow version pre-installed,
 ## Other Deep Learning Libraries
 If you use another deep learning library, such as PyTorch, we recommend one of the following base images.
 Each one has CUDA 11, the minimum version required for your Docker image.
-- `FROM danieldeutsch/python:3.6-cuda11.0.3-base`
-- `FROM danieldeutsch/python:3.7-cuda11.0.3-base`
-- `FROM danieldeutsch/python:3.8-cuda11.0.3-base`
-- `FROM danieldeutsch/python:3.9-cuda11.0.3-base`
+- `FROM danieldeutsch/python:3.6-cuda11.0.3-base-v2`
+- `FROM danieldeutsch/python:3.7-cuda11.0.3-base-v2`
+- `FROM danieldeutsch/python:3.8-cuda11.0.3-base-v2`
+- `FROM danieldeutsch/python:3.9-cuda11.0.3-base-v2`
 
 These images do not have any deep learning libraries pre-installed, so you must do it yourself.
 PyTorch can be installed with one of the following commands:
