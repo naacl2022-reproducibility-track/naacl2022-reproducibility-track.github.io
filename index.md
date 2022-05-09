@@ -5,7 +5,7 @@
 layout: home
 --- 
 
-This is the homepage for the new [Reproducibility Track](https://2022.naacl.org/blog/reproducibility-track/) introduced at [NAACL 2022](https://2022.naacl.org/). If you are interested in participating, please join our [Slack workspace](https://join.slack.com/t/cs-b5i1449/shared_invite/zt-16nrrhflc-gPPQwvU7OQCEoO8YG393Ng). You can also reach us [via email](mailto:naacl-2022-reproducibility-track@googlegroups.com). Please submit the relevant information required to participate in [this form](https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__QPVZQtUMlgwWktNSVo0NVBDQ1JXTkdESFc4NFdBWC4u).
+This is the homepage for the new [Reproducibility Track](https://2022.naacl.org/blog/reproducibility-track/) introduced at [NAACL 2022](https://2022.naacl.org/). If you are interested in participating, please join our [Slack workspace](https://join.slack.com/t/naacl2022repr-fzm7952/shared_invite/zt-18jnk8g3k-F_n7wNjXTYU~oocCMc_rVg).
 
 <!-- Output copied to clipboard! -->
 

@@ -12,7 +12,7 @@ The table below has the times and calendar invites for the office hours.
 The UTC times are the official times (please double check that the local time is correct).
 
 The office hours will be held with Google Meet.
-If these times do not work for you or you are unable to access Google Meet, please get in contact with us [via email](mailto:naacl-2022-reproducibility-track@googlegroups.com) or [Slack](https://join.slack.com/t/cs-b5i1449/shared_invite/zt-16nrrhflc-gPPQwvU7OQCEoO8YG393Ng).
+If these times do not work for you or you are unable to access Google Meet, please get in contact with us [via email](mailto:naacl-2022-reproducibility-track@googlegroups.com) or [Slack](https://join.slack.com/t/naacl2022repr-fzm7952/shared_invite/zt-18jnk8g3k-F_n7wNjXTYU~oocCMc_rVg).
 
 <table>
   <tr>
