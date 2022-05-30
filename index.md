@@ -41,8 +41,6 @@ Conversion notes:
 | April 19 | Office hours to help with submissions announced. Please see [here](/pages/office-hours.html) for times |
 | May 10 | Submissions for **main conference papers** (including Findings) are due (updated from May 3). You may submit to the track [here](https://forms.office.com/r/iGiY8XiiH8) |
 | May 18 | Submission deadline for **demo papers**. You may submit to the track [here](https://forms.office.com/r/iGiY8XiiH8) |
-| May 20 | Badge notification date for main conference papers |
-| May 28 | Badge notification date for demo papers |
 
 **TLDR;** After notification of acceptance and before the camera ready is due authors will have the option to earn up to three reproducibility “badges” by 1) providing a link to code, 2) providing a link to a trained model, and 3) participating in a verification process where a trained model will replicate some result from the paper. 
 
