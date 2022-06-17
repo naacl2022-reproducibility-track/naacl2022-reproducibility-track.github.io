@@ -2,7 +2,7 @@
 layout: default
 title: Organizers
 permalink: /organizers/
-order: 3
+order: 4
 header: true
 ---
 
@@ -12,7 +12,7 @@ header: true
 <figure style="display:inline-block; padding: 10px">
         <img src="/assets/images/jesse.png" width="100" height="100" />
         <figcaption style="word-wrap: break-word;font-size: 14px;text-align: center;">Jesse Dodge</figcaption>
-</figure>
+</figure> 
 <figure style="display:inline-block; padding: 10px">
         <img src="/assets/images/niranjan.png" width="100" height="100" />
         <figcaption style="word-wrap: break-word;font-size: 14px;text-align: center;">Niranjan Balasubramanian</figcaption>
